@@ -1,443 +1,38 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>School Dynamics | Modern School Management Software Uganda</title>
-  <meta name="description" content="School Dynamics by MTA - Complete school management software for Ugandan schools. Manage student records, fees, attendance, exams and more." />
-  <meta name="keywords" content="school management software Uganda, education ERP Kampala, school management system Uganda, school administration software, student information system Uganda, school fees management Uganda, attendance tracking Uganda, exam management software Uganda, parent communication portal Uganda, School Dynamics Uganda" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>School Dynamics | Modern School Management Software Uganda</title>
+<meta name="description"
+  content="School Dynamics by MTA - Complete school management software for Ugandan schools. Manage student records, fees, attendance, exams and more." />
+<meta name="keywords"
+  content="school management software Uganda, education ERP Kampala, school management system Uganda, school administration software, student information system Uganda, school fees management Uganda, attendance tracking Uganda, exam management software Uganda, parent communication portal Uganda, School Dynamics Uganda" />
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap');
-    :root{
-      --bg:#0d0d0d;
-      --bg-alt:#141414;
-      --surface:#1a1a1a;
-      --surface-raised:#222222;
-      --text:#f5f5f5;
-      --text-dim:#888888;
-      --text-muted:#666666;
-      --border:#333333;
-      --accent:#ff6b35;
-      --accent-hover:#ff8c5a;
-      --accent-glow:rgba(255,107,53,0.3);
-      --secondary:#00d4aa;
-      --shadow:0 8px 32px rgba(0,0,0,0.4);
-      --radius-sm:6px;
-      --radius:12px;
-      --radius-lg:20px;
-      --max:1200px;
-      --font:'Outfit', sans-serif;
-      --font-mono:'Space Mono', monospace;
-    }
-    *{box-sizing:border-box; margin:0; padding:0}
-    html{scroll-behavior:smooth; overflow-x:hidden}
-    body{
-      width:100%;
-      max-width:100vw;
-      font-family:var(--font);
-      color:var(--text);
-      background-color:var(--bg);
-      background-image: 
-        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(255,107,53,0.15), transparent),
-        radial-gradient(ellipse 60% 40% at 100% 0%, rgba(0,212,170,0.08), transparent);
-      background-attachment:fixed;
-      background-size:cover;
-      line-height:1.6;
-      min-height:100vh;
-    }
-    body::before{
-      content:'';
-      position:fixed;
-      top:0;left:0;right:0;bottom:0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-      opacity:0.03;
-      pointer-events:none;
-      z-index:0;
-    }
-    a{color:inherit; text-decoration:none}
-    .wrap{width:100%;max-width:100%;margin:0 auto;padding:0 24px;position:relative;z-index:1}
-    section{padding:48px 0;position:relative;z-index:1;width:100%}
-    .card{
-      background:var(--surface);
-      border:1px solid var(--border);
-      border-radius:var(--radius-lg);
-      box-shadow:var(--shadow);
-      transition:transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 16px 48px rgba(0,0,0,0.5);
-    }
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://schooldynamics.cloud/" />
+<meta property="og:title" content="School Dynamics | Modern School Management Software Uganda" />
+<meta property="og:description"
+  content="Complete school management software for Ugandan schools. Manage student records, fees, attendance, exams and more." />
+<meta property="og:image" content="https://schooldynamics.cloud/home.png" />
 
-    /* Header */
-    header{
-      position:fixed; top:0; left:0; right:0; z-index:100;
-      width:100%;
-      background:rgba(13,13,13,0.95);
-      backdrop-filter:blur(20px);
-      border-bottom:1px solid var(--border);
-    }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:20px; padding:16px 24px;
-      max-width:100%;
-      width:100%;
-    }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-      font-weight:800; letter-spacing:-0.5px;
-      font-size:1.25rem;
-    }
-    .logo{
-      width:40px; height:40px; border-radius:var(--radius-sm);
-      background:linear-gradient(135deg, var(--accent), #ff8c5a);
-      display:flex; align-items:center; justify-content:center;
-      font-family:var(--font-mono); font-weight:700; font-size:1.1rem;
-      box-shadow:0 4px 16px var(--accent-glow);
-    }
-    .navlinks{
-      display:flex; align-items:center; justify-content:flex-end;
-      gap:8px; flex-wrap:wrap;
-      font-weight:600;
-    }
-    .navlinks a{
-      padding:10px 16px; border-radius:var(--radius-sm);
-      color:var(--text-dim); transition:all 0.2s ease;
-      font-size:0.95rem;
-    }
-    .navlinks a:hover{color:var(--text); background:rgba(255,255,255,0.05)}
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://schooldynamics.cloud/" />
+<meta property="twitter:title" content="School Dynamics | Modern School Management Software Uganda" />
+<meta property="twitter:description"
+  content="Complete school management software for Ugandan schools. Manage student records, fees, attendance, exams and more." />
+<meta property="twitter:image" content="https://schooldynamics.cloud/home.png" />
 
-    /* Buttons */
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 24px;
-      border-radius:var(--radius-sm);
-      border:1px solid var(--border);
-      background:var(--surface);
-      color:var(--text);
-      font-weight:600;
-      font-size:0.95rem;
-      cursor:pointer;
-      transition:all 0.2s ease;
-      white-space:nowrap;
-    }
-    .btn:hover{
-      background:var(--surface-raised);
-      border-color:var(--text-dim);
-      transform:translateY(-2px);
-    }
-    .btn:active{transform:translateY(0)}
-    .btn.primary{
-      border:none;
-      background:linear-gradient(135deg, var(--accent), #ff8c5a);
-      box-shadow:0 4px 20px var(--accent-glow);
-      color:#000;
-      font-weight:700;
-    }
-    .btn.primary:hover{
-      background:linear-gradient(135deg, var(--accent-hover), #ffa070);
-      box-shadow:0 8px 30px var(--accent-glow);
-    }
-    .btn.small{padding:8px 16px; font-size:0.85rem}
-    .btn.ghost{background:transparent; border-color:transparent}
-    .btn.ghost:hover{background:rgba(255,255,255,0.05)}
+<!-- Canonical -->
+<link rel="canonical" href="https://schooldynamics.cloud/" />
 
-    /* Hero */
-    .hero{
-      padding:140px 0 60px;
-      position:relative;
-      width:100%;
-    }
-    .heroGrid{
-      display:grid;
-      grid-template-columns:1.2fr 0.8fr;
-      gap:48px;
-      align-items:center;
-      width:100%;
-    }
-    .kicker{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:8px 16px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:rgba(255,107,53,0.1);
-      color:var(--accent);
-      font-weight:600;
-      font-size:0.85rem;
-      width:fit-content;
-      margin-bottom:24px;
-      font-family:var(--font-mono);
-      font-size:0.75rem;
-    }
-    h1{
-      margin:0 0 24px;
-      font-size:clamp(2.5rem, 5vw, 4rem);
-      line-height:1.1;
-      font-weight:800;
-      letter-spacing:-2px;
-    }
-    h1 .highlight{
-      color:var(--accent);
-      font-weight:800;
-    }
-    .sub{
-      margin:0 0 32px;
-      color:var(--text-dim);
-      font-size:1.15rem;
-      max-width:56ch;
-      line-height:1.7;
-    }
-    .ctaRow{display:flex; gap:16px; flex-wrap:wrap; align-items:center}
-    .mini{margin-top:24px; color:var(--text-muted); font-size:0.9rem; display:flex; gap:20px; flex-wrap:wrap}
-    .mini span{display:flex; align-items:center; gap:8px}
-    .mini span::before{content:'✓'; color:var(--secondary)}
-
-    .heroSide{
-      padding:32px;
-      display:flex;
-      flex-direction:column;
-      gap:20px;
-      background:linear-gradient(180deg, var(--surface), var(--bg-alt));
-      position:relative;
-      overflow:hidden;
-    }
-    .heroSide::before{
-      content:'';
-      position:absolute;
-      top:-50%;right:-50%;
-      width:100%;height:100%;
-      background:radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
-      opacity:0.5;
-    }
-    .mock{
-      height:200px;
-      border-radius:var(--radius);
-      border:2px dashed var(--border);
-      background:var(--surface-raised);
-      display:flex; align-items:center; justify-content:center;
-      flex-direction:column;
-      gap:12px;
-      padding:20px;
-      text-align:center;
-      color:var(--text-dim);
-      font-weight:600;
-      position:relative;z-index:1;
-    }
-    .mock .placeholder-icon{
-      width:64px;height:64px;border-radius:50%;background:var(--surface);border:2px solid var(--border);
-      display:flex;align-items:center;justify-content:center;font-size:1.5rem;
-    }
-    .stats{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:12px;
-      position:relative;z-index:1;
-    }
-    .stat{
-      padding:16px;
-      border-radius:var(--radius);
-      border:1px solid var(--border);
-      background:rgba(0,212,170,0.05);
-      text-align:center;
-    }
-    .stat b{display:block; font-size:1.5rem; font-weight:700; color:var(--secondary)}
-    .stat span{display:block; color:var(--text-muted); font-size:0.75rem; margin-top:4px; text-transform:uppercase; letter-spacing:0.5px}
-
-    /* Section headings */
-    .sectionTitle{
-      display:flex; align-items:flex-end; justify-content:space-between;
-      gap:24px; margin-bottom:40px;
-      flex-wrap:wrap;
-    }
-    .sectionTitle h2{
-      margin:0;
-      font-size:clamp(1.75rem, 3vw, 2.5rem);
-      font-weight:700;
-      letter-spacing:-1px;
-    }
-    .sectionTitle p{margin:0; color:var(--text-dim); max-width:60ch; font-size:1.05rem}
-
-    /* Products grid */
-    .grid3{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:24px;
-    }
-    .product{
-      padding:28px;
-      border-radius:var(--radius-lg);
-      border:1px solid var(--border);
-      background:var(--surface);
-      display:flex;
-      flex-direction:column;
-      gap:16px;
-      min-height:280px;
-      position:relative;
-      overflow:hidden;
-    }
-    .product::before{
-      content:'';
-      position:absolute;
-      top:0;left:0;right:0;height:3px;
-      background:linear-gradient(90deg, var(--accent), var(--secondary));
-      opacity:0;
-      transition:opacity 0.3s ease;
-    }
-    .product:hover::before{opacity:1}
-    .badgeRow{display:flex; gap:8px; flex-wrap:wrap}
-    .badge{
-      display:inline-flex; align-items:center; gap:6px;
-      padding:6px 12px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:var(--surface-raised);
-      font-size:0.75rem;
-      color:var(--text-muted);
-      font-weight:600;
-      text-transform:uppercase;
-      letter-spacing:0.5px;
-    }
-    .badge.ok{border-color:rgba(0,212,170,0.3); background:rgba(0,212,170,0.1); color:var(--secondary)}
-    .product h3{margin:0; font-size:1.25rem; font-weight:700}
-    .product p{margin:0; color:var(--text-dim); font-size:0.95rem; line-height:1.6}
-    .product .actions{margin-top:auto; display:flex; gap:12px; flex-wrap:wrap; padding-top:16px}
-
-    /* Services / process */
-    .grid2{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:24px;
-    }
-    .feature{
-      padding:28px;
-      border-radius:var(--radius-lg);
-      border:1px solid var(--border);
-      background:var(--surface);
-      transition:all 0.3s ease;
-    }
-    .feature:hover{
-      border-color:var(--accent);
-      background:linear-gradient(180deg, var(--surface), rgba(255,107,53,0.05));
-    }
-    .icon{
-      width:56px; height:56px; border-radius:var(--radius);
-      display:flex; align-items:center; justify-content:center;
-      background:linear-gradient(135deg, rgba(255,107,53,0.15), rgba(0,212,170,0.1));
-      border:1px solid rgba(255,107,53,0.2);
-      font-size:1.5rem;
-      margin-bottom:20px;
-    }
-    .feature h3{margin:0 0 12px; font-size:1.2rem; font-weight:700}
-    .feature p{margin:0; color:var(--text-dim); font-size:0.95rem; line-height:1.6}
-
-    /* Contact */
-    .contactGrid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:32px;
-    }
-    .form{padding:32px}
-    label{display:block; font-size:0.9rem; color:var(--text-dim); margin:16px 0 8px; font-weight:500}
-    input, select, textarea{
-      width:100%;
-      padding:14px 16px;
-      border-radius:var(--radius-sm);
-      border:1px solid var(--border);
-      background:var(--surface-raised);
-      color:var(--text);
-      font-size:1rem;
-      font-family:var(--font);
-      outline:none;
-      transition:border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-    input:focus, select:focus, textarea:focus{
-      border-color:var(--accent);
-      box-shadow:0 0 0 3px var(--accent-glow);
-    }
-    textarea{min-height:120px; resize:vertical}
-    .fine{color:var(--text-muted); font-size:0.85rem; margin-top:16px; line-height:1.5}
-    .pillRow{display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-start; margin-top:20px}
-    .pill{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:10px 16px;
-      border-radius:var(--radius-sm);
-      border:1px solid var(--border);
-      background:var(--surface-raised);
-      font-size:0.9rem;
-      color:var(--text-dim);
-    }
-    .pill:hover{color:var(--text); border-color:var(--text-dim)}
-
-    /* Footer */
-    footer{
-      padding:48px 0;
-      border-top:1px solid var(--border);
-      margin-top:48px;
-      background:var(--bg-alt);
-    }
-    .foot{
-      display:flex; align-items:flex-start; justify-content:space-between;
-      gap:32px; flex-wrap:wrap;
-    }
-
-    @media (max-width: 1024px){
-      .heroGrid{grid-template-columns:1fr}
-      .grid3{grid-template-columns:repeat(2, 1fr)}
-      .grid2{grid-template-columns:1fr}
-      .contactGrid{grid-template-columns:1fr}
-      .stats{grid-template-columns:repeat(3, 1fr)}
-    }
-    @media (max-width: 640px){
-      .grid3{grid-template-columns:1fr}
-      .nav{flex-direction:column; align-items:flex-start; gap:16px}
-      .navlinks{justify-content:flex-start; width:100%}
-      .navlinks a{padding:8px 12px}
-      .stats{grid-template-columns:1fr}
-      .hero{padding:120px 0 40px}
-      h1{letter-spacing:-1px}
-      .ctaRow{flex-direction:column; align-items:stretch}
-      .btn{width:100%; justify-content:center}
-    }
-  </style>
+<!-- Styles -->
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- CONFIG (replace these values) -->
-  <script>
-    const AGENCY_NAME = "School Dynamics";
-    const AGENCY_PHONE_E164 = "256414341010"; // format: 2567XXXXXXXX (no +)
-    const AGENCY_EMAIL = "info@mta.co.ug";
-    const AGENCY_LOCATION = "Plot 20, Lumumba Avenue, Piato Building, Kampala";
-
-    // Official link(s) for School Dynamics by MTA (replace)
-    const SCHOOL_DYNAMICS_URL = "https://schooldynamics.cloud/"; // put the real one
-
-    // UTM tracking for outbound links
-    const UTM_SOURCE = "schooldynamics";
-    const UTM_MEDIUM = "landingpage";
-    const UTM_CAMPAIGN = "product_leads";
-
-    // WhatsApp receiver for School Dynamics
-    const WHATSAPP_RECEIVER_E164 = AGENCY_PHONE_E164;
-
-    function withUtm(url, campaign = UTM_CAMPAIGN){
-      const hasQ = url.includes("?");
-      const sep = hasQ ? "&" : "?";
-      return `${url}${sep}utm_source=${encodeURIComponent(UTM_SOURCE)}&utm_medium=${encodeURIComponent(UTM_MEDIUM)}&utm_campaign=${encodeURIComponent(campaign)}`;
-    }
-    function waLink(message){
-      return `https://wa.me/${WHATSAPP_RECEIVER_E164}?text=${encodeURIComponent(message)}`;
-    }
-    function setText(id, text){
-      const el = document.getElementById(id);
-      if (el) el.textContent = text;
-    }
-    function setHref(id, href){
-      const el = document.getElementById(id);
-      if (el) el.href = href;
-    }
-  </script>
+  <!-- Scripts will be loaded at the end -->
 
   <header>
     <div class="wrap">
@@ -454,6 +49,10 @@
           <a href="#contact">Contact</a>
           <a class="btn primary small" href="#contact">Get a Quote</a>
         </nav>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+          <span>☰</span>
+        </button>
       </div>
     </div>
   </header>
@@ -470,7 +69,9 @@
             </h1>
 
             <p class="sub">
-              <b id="agencyNameInline">School Dynamics</b> is a web-based end-to-end school management system tailored specifically for educational institutions in Uganda. It provides solutions from basic student management to advanced analytics, scheduling, financial tracking, and mobile access. Request a demo today.
+              <b id="agencyNameInline">School Dynamics</b> is a web-based end-to-end school management system tailored
+              specifically for educational institutions in Uganda. It provides solutions from basic student management
+              to advanced analytics, scheduling, financial tracking, and mobile access. Request a demo today.
             </p>
 
             <div class="ctaRow">
@@ -490,7 +91,8 @@
 
           <div class="card heroSide">
             <div class="mock">
-              <img src="home.png" alt="School Dynamics Dashboard Preview" style="width:100%;height:auto;border-radius:8px;border:1px solid var(--border);" />
+              <img src="home.png" alt="School Dynamics Dashboard Preview"
+                style="width:100%;height:auto;border-radius:8px;border:1px solid var(--border);" />
             </div>
 
             <div class="stats">
@@ -517,22 +119,26 @@
       <div class="wrap">
         <div class="sectionTitle">
           <h2>School Management Solution</h2>
-          <p>A comprehensive school management system that streamlines fees, exams, attendance, reports, records, and parent communication.</p>
+          <p>A comprehensive school management system that streamlines fees, exams, attendance, reports, records, and
+            parent communication.</p>
         </div>
 
         <div class="grid3">
           <div class="product card" style="grid-column: span 3;">
-            <img src="home.png" alt="School Dynamics Dashboard" style="width:100%;height:200px;object-fit:cover;border-radius:12px;margin-bottom:16px;" />
+            <img src="home.png" alt="School Dynamics Dashboard"
+              style="width:100%;height:200px;object-fit:cover;border-radius:12px;margin-bottom:16px;" />
             <div class="badgeRow">
               <span class="badge ok">Featured</span>
               <span class="badge">Education</span>
               <span class="badge">#1 School Management</span>
             </div>
             <h3>School Dynamics by MTA</h3>
-            <p>Complete school management solution for fees collection, exams management, attendance tracking, reports generation, student records, and parent communication.</p>
+            <p>Complete school management solution for fees collection, exams management, attendance tracking, reports
+              generation, student records, and parent communication.</p>
             <div class="actions">
               <a class="btn" id="sdLearn" href="#" target="_blank" rel="noopener">Visit Website</a>
-              <button class="btn primary" type="button" onclick="selectProduct('School Dynamics by MTA')">Request Demo</button>
+              <button class="btn primary" type="button" onclick="selectProduct('School Dynamics by MTA')">Request
+                Demo</button>
             </div>
           </div>
         </div>
@@ -544,25 +150,30 @@
       <div class="wrap">
         <div class="sectionTitle" style="text-align:center;flex-direction:column;align-items:center;">
           <h2>Trusted by 200+ Schools Across Uganda</h2>
-          <p style="text-align:center;max-width:700px;">Join hundreds of schools that have transformed their operations with School Dynamics.</p>
+          <p style="text-align:center;max-width:700px;">Join hundreds of schools that have transformed their operations
+            with School Dynamics.</p>
         </div>
 
         <div class="grid3" style="margin-top:40px;">
           <div class="card" style="padding:28px;">
             <div style="color:var(--accent);font-size:1.5rem;margin-bottom:16px;">★★★★★</div>
-            <p style="color:var(--text-dim);font-size:0.95rem;margin-bottom:16px;font-style:italic;">"School Dynamics has transformed how we manage our school. Fee collection is now seamless and parents love the real-time updates."</p>
+            <p style="color:var(--text-dim);font-size:0.95rem;margin-bottom:16px;font-style:italic;">"School Dynamics
+              has transformed how we manage our school. Fee collection is now seamless and parents love the real-time
+              updates."</p>
             <div style="font-weight:700;">St. Mary's Primary School</div>
             <div style="color:var(--text-muted);font-size:0.85rem;">Kampala, Uganda</div>
           </div>
           <div class="card" style="padding:28px;">
             <div style="color:var(--accent);font-size:1.5rem;margin-bottom:16px;">★★★★★</div>
-            <p style="color:var(--text-dim);font-size:0.95rem;margin-bottom:16px;font-style:italic;">"The attendance tracking with SMS alerts to parents has improved our student attendance by 40%. Highly recommended!"</p>
+            <p style="color:var(--text-dim);font-size:0.95rem;margin-bottom:16px;font-style:italic;">"The attendance
+              tracking with SMS alerts to parents has improved our student attendance by 40%. Highly recommended!"</p>
             <div style="font-weight:700;">Namilyango College</div>
             <div style="color:var(--text-muted);font-size:0.85rem;">Mukono, Uganda</div>
           </div>
           <div class="card" style="padding:28px;">
             <div style="color:var(--accent);font-size:1.5rem;margin-bottom:16px;">★★★★★</div>
-            <p style="color:var(--text-dim);font-size:0.95rem;margin-bottom:16px;font-style:italic;">"Best investment we've made. The exam management and reporting features save us countless hours every term."</p>
+            <p style="color:var(--text-dim);font-size:0.95rem;margin-bottom:16px;font-style:italic;">"Best investment
+              we've made. The exam management and reporting features save us countless hours every term."</p>
             <div style="font-weight:700;">Kings College Budo</div>
             <div style="color:var(--text-muted);font-size:0.85rem;">Wakiso, Uganda</div>
           </div>
@@ -575,7 +186,8 @@
             <span style="font-size:1.5rem;font-weight:700;">98%</span>
             <span style="font-size:1.5rem;font-weight:700;">UGX 2B+</span>
           </div>
-          <div style="display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-top:8px;color:var(--text-muted);font-size:0.9rem;">
+          <div
+            style="display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-top:8px;color:var(--text-muted);font-size:0.9rem;">
             <span>Schools Served</span>
             <span>Students Managed</span>
             <span>Customer Satisfaction</span>
@@ -590,14 +202,17 @@
       <div class="wrap">
         <div class="sectionTitle" style="text-align:center;flex-direction:column;align-items:center;">
           <h2>Flexible Pricing Plans</h2>
-          <p style="text-align:center;max-width:700px;">Choose the package that fits your school. All plans include training, support, and regular updates.</p>
+          <p style="text-align:center;max-width:700px;">Choose the package that fits your school. All plans include
+            training, support, and regular updates.</p>
         </div>
 
         <div class="grid3" style="margin-top:40px;">
           <div class="card" style="padding:32px;text-align:center;">
             <div style="font-size:1.25rem;font-weight:700;margin-bottom:8px;">Starter</div>
-            <div style="font-size:2.5rem;font-weight:800;color:var(--accent);">UGX 2.5M<span style="font-size:1rem;font-weight:400;color:var(--text-muted);">/month</span></div>
-            <p style="color:var(--text-dim);margin:16px 0;">Perfect for small schools getting started with digital record-keeping</p>
+            <div style="font-size:2.5rem;font-weight:800;color:var(--accent);">UGX 2.5M<span
+                style="font-size:1rem;font-weight:400;color:var(--text-muted);">/month</span></div>
+            <p style="color:var(--text-dim);margin:16px 0;">Perfect for small schools getting started with digital
+              record-keeping</p>
             <ul style="text-align:left;color:var(--text-dim);font-size:0.9rem;padding-left:20px;margin:20px 0;">
               <li style="margin-bottom:8px;">Up to 200 Students</li>
               <li style="margin-bottom:8px;">Fees Management</li>
@@ -606,13 +221,18 @@
               <li style="margin-bottom:8px;">Basic Reports</li>
               <li style="margin-bottom:8px;">Email Support</li>
             </ul>
-            <button class="btn primary" style="width:100%;" onclick="selectProduct('Starter Package')">Get Started</button>
+            <button class="btn primary" style="width:100%;" onclick="selectProduct('Starter Package')">Get
+              Started</button>
           </div>
           <div class="card" style="padding:32px;text-align:center;border-color:var(--accent);">
-            <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#000;padding:4px 16px;border-radius:999px;font-size:0.75rem;font-weight:700;">MOST POPULAR</div>
+            <div
+              style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#000;padding:4px 16px;border-radius:999px;font-size:0.75rem;font-weight:700;">
+              MOST POPULAR</div>
             <div style="font-size:1.25rem;font-weight:700;margin-bottom:8px;">Growth</div>
-            <div style="font-size:2.5rem;font-weight:800;color:var(--accent);">UGX 5M<span style="font-size:1rem;font-weight:400;color:var(--text-muted);">/month</span></div>
-            <p style="color:var(--text-dim);margin:16px 0;">Ideal for growing schools ready to scale their operations</p>
+            <div style="font-size:2.5rem;font-weight:800;color:var(--accent);">UGX 5M<span
+                style="font-size:1rem;font-weight:400;color:var(--text-muted);">/month</span></div>
+            <p style="color:var(--text-dim);margin:16px 0;">Ideal for growing schools ready to scale their operations
+            </p>
             <ul style="text-align:left;color:var(--text-dim);font-size:0.9rem;padding-left:20px;margin:20px 0;">
               <li style="margin-bottom:8px;">Up to 500 Students</li>
               <li style="margin-bottom:8px;">Everything in Starter</li>
@@ -621,11 +241,13 @@
               <li style="margin-bottom:8px;">Advanced Reports</li>
               <li style="margin-bottom:8px;">Priority Support</li>
             </ul>
-            <button class="btn primary" style="width:100%;" onclick="selectProduct('Growth Package')">Get Started</button>
+            <button class="btn primary" style="width:100%;" onclick="selectProduct('Growth Package')">Get
+              Started</button>
           </div>
           <div class="card" style="padding:32px;text-align:center;">
             <div style="font-size:1.25rem;font-weight:700;margin-bottom:8px;">Enterprise</div>
-            <div style="font-size:2.5rem;font-weight:800;color:var(--accent);">UGX 10M<span style="font-size:1rem;font-weight:400;color:var(--text-muted);">/month</span></div>
+            <div style="font-size:2.5rem;font-weight:800;color:var(--accent);">UGX 10M<span
+                style="font-size:1rem;font-weight:400;color:var(--text-muted);">/month</span></div>
             <p style="color:var(--text-dim);margin:16px 0;">For large schools needing comprehensive management</p>
             <ul style="text-align:left;color:var(--text-dim);font-size:0.9rem;padding-left:20px;margin:20px 0;">
               <li style="margin-bottom:8px;">Unlimited Students</li>
@@ -635,27 +257,32 @@
               <li style="margin-bottom:8px;">API Access</li>
               <li style="margin-bottom:8px;">24/7 Dedicated Support</li>
             </ul>
-            <button class="btn primary" style="width:100%;" onclick="selectProduct('Enterprise Package')">Contact Sales</button>
+            <button class="btn primary" style="width:100%;" onclick="selectProduct('Enterprise Package')">Contact
+              Sales</button>
           </div>
         </div>
       </div>
     </section>
-       
+
 
     <!-- SERVICES -->
     <section id="services">
       <div class="wrap">
         <div class="sectionTitle" style="text-align:center;flex-direction:column;align-items:center;">
           <h2>Why Choose School Dynamics?</h2>
-          <p style="text-align:center;max-width:700px;">Join over 200 schools across Uganda that trust School Dynamics to streamline their administrative operations and improve parent engagement.</p>
+          <p style="text-align:center;max-width:700px;">Join over 200 schools across Uganda that trust School Dynamics
+            to streamline their administrative operations and improve parent engagement.</p>
         </div>
 
         <div class="grid2" style="margin-top:40px;">
           <div class="feature card" style="position:relative;overflow:hidden;">
-            <div style="position:absolute;top:0;right:0;width:80px;height:80px;background:linear-gradient(135deg,var(--accent),var(--secondary));opacity:0.1;border-radius:50%;transform:translate(30%,-30%);"></div>
+            <div
+              style="position:absolute;top:0;right:0;width:80px;height:80px;background:linear-gradient(135deg,var(--accent),var(--secondary));opacity:0.1;border-radius:50%;transform:translate(30%,-30%);">
+            </div>
             <div class="icon" style="width:64px;height:64px;font-size:1.75rem;">🎓</div>
             <h3>Complete School Management</h3>
-            <p>All-in-one platform managing student records, enrollment, class scheduling, exam management, and academic reporting. Everything your school needs in one place.</p>
+            <p>All-in-one platform managing student records, enrollment, class scheduling, exam management, and academic
+              reporting. Everything your school needs in one place.</p>
             <ul style="margin-top:12px;color:var(--text-dim);font-size:0.9rem;padding-left:20px;">
               <li>Student Information System</li>
               <li>Class & Section Management</li>
@@ -665,10 +292,13 @@
           </div>
 
           <div class="feature card" style="position:relative;overflow:hidden;">
-            <div style="position:absolute;top:0;right:0;width:80px;height:80px;background:linear-gradient(135deg,var(--accent),var(--secondary));opacity:0.1;border-radius:50%;transform:translate(30%,-30%);"></div>
+            <div
+              style="position:absolute;top:0;right:0;width:80px;height:80px;background:linear-gradient(135deg,var(--accent),var(--secondary));opacity:0.1;border-radius:50%;transform:translate(30%,-30%);">
+            </div>
             <div class="icon" style="width:64px;height:64px;font-size:1.75rem;">📱</div>
             <h3>Parent Communication</h3>
-            <p>Keep parents informed and engaged with real-time updates about their child's academic progress, attendance, and school announcements.</p>
+            <p>Keep parents informed and engaged with real-time updates about their child's academic progress,
+              attendance, and school announcements.</p>
             <ul style="margin-top:12px;color:var(--text-dim);font-size:0.9rem;padding-left:20px;">
               <li>SMS Notifications</li>
               <li>Real-time Attendance Alerts</li>
@@ -679,10 +309,13 @@
           </div>
 
           <div class="feature card" style="position:relative;overflow:hidden;">
-            <div style="position:absolute;top:0;right:0;width:80px;height:80px;background:linear-gradient(135deg,var(--accent),var(--secondary));opacity:0.1;border-radius:50%;transform:translate(30%,-30%);"></div>
+            <div
+              style="position:absolute;top:0;right:0;width:80px;height:80px;background:linear-gradient(135deg,var(--accent),var(--secondary));opacity:0.1;border-radius:50%;transform:translate(30%,-30%);">
+            </div>
             <div class="icon" style="width:64px;height:64px;font-size:1.75rem;">💰</div>
             <h3>Fees & Financial Management</h3>
-            <p>Streamlined fee collection with multiple payment methods, automated reminders, and comprehensive financial reporting.</p>
+            <p>Streamlined fee collection with multiple payment methods, automated reminders, and comprehensive
+              financial reporting.</p>
             <ul style="margin-top:12px;color:var(--text-dim);font-size:0.9rem;padding-left:20px;">
               <li>Flexible Fee Structures</li>
               <li>Online Payment Integration</li>
@@ -693,7 +326,9 @@
           </div>
 
           <div class="feature card" style="position:relative;overflow:hidden;">
-            <div style="position:absolute;top:0;right:0;width:80px;height:80px;background:linear-gradient(135deg,var(--accent),var(--secondary));opacity:0.1;border-radius:50%;transform:translate(30%,-30%);"></div>
+            <div
+              style="position:absolute;top:0;right:0;width:80px;height:80px;background:linear-gradient(135deg,var(--accent),var(--secondary));opacity:0.1;border-radius:50%;transform:translate(30%,-30%);">
+            </div>
             <div class="icon" style="width:64px;height:64px;font-size:1.75rem;">📊</div>
             <h3>Attendance Tracking</h3>
             <p>Daily attendance marking with instant parent notifications and comprehensive attendance analytics.</p>
@@ -706,10 +341,13 @@
           </div>
 
           <div class="feature card" style="position:relative;overflow:hidden;">
-            <div style="position:absolute;top:0;right:0;width:80px;height:80px;background:linear-gradient(135deg,var(--accent),var(--secondary));opacity:0.1;border-radius:50%;transform:translate(30%,-30%);"></div>
+            <div
+              style="position:absolute;top:0;right:0;width:80px;height:80px;background:linear-gradient(135deg,var(--accent),var(--secondary));opacity:0.1;border-radius:50%;transform:translate(30%,-30%);">
+            </div>
             <div class="icon" style="width:64px;height:64px;font-size:1.75rem;">🔒</div>
             <h3>Secure & Reliable</h3>
-            <p>Your data is protected with enterprise-grade security and automatic backups, ensuring you never lose important information.</p>
+            <p>Your data is protected with enterprise-grade security and automatic backups, ensuring you never lose
+              important information.</p>
             <ul style="margin-top:12px;color:var(--text-dim);font-size:0.9rem;padding-left:20px;">
               <li>Cloud-Based Storage</li>
               <li>Daily Automatic Backups</li>
@@ -719,10 +357,13 @@
           </div>
 
           <div class="feature card" style="position:relative;overflow:hidden;">
-            <div style="position:absolute;top:0;right:0;width:80px;height:80px;background:linear-gradient(135deg,var(--accent),var(--secondary));opacity:0.1;border-radius:50%;transform:translate(30%,-30%);"></div>
+            <div
+              style="position:absolute;top:0;right:0;width:80px;height:80px;background:linear-gradient(135deg,var(--accent),var(--secondary));opacity:0.1;border-radius:50%;transform:translate(30%,-30%);">
+            </div>
             <div class="icon" style="width:64px;height:64px;font-size:1.75rem;">🛠️</div>
             <h3>Dedicated Support</h3>
-            <p>Our team provides comprehensive training and ongoing support to ensure your school gets the most out of the system.</p>
+            <p>Our team provides comprehensive training and ongoing support to ensure your school gets the most out of
+              the system.</p>
             <ul style="margin-top:12px;color:var(--text-dim);font-size:0.9rem;padding-left:20px;">
               <li>Free Training Sessions</li>
               <li>24/7 Technical Support</li>
@@ -733,35 +374,39 @@
         </div>
       </div>
     </section>
-          <p>Comprehensive tools to manage every aspect of your school operations., not just “posts”.</p>
-        </div>
+    <p>Comprehensive tools to manage every aspect of your school operations., not just “posts”.</p>
+    </div>
 
-        <div class="grid2">
-          <div class="feature card">
-            <div class="icon">🎯</div>
-            <h3>Uganda-Centric Design</h3>
-            <p>Developed with understanding of Ugandan educational ecosystem including fee structures, document formats, and administrative workflows.</p>
-          </div>
-
-          <div class="feature card">
-            <div class="icon">🧩</div>
-            <h3>Comprehensive Feature Set</h3>
-            <p>Student management, teacher portals, smart scheduling, analytics & reporting, financial tracking, and document generation all on one platform.</p>
-          </div>
-
-          <div class="feature card">
-            <div class="icon">📢</div>
-            <h3>Scalable Pricing</h3>
-            <p>Tiered pricing model charges per active student with decreasing costs at higher volumes, viable for small primary schools to large institutions.</p>
-          </div>
-
-          <div class="feature card">
-            <div class="icon">📈</div>
-            <h3>Automation & Productivity</h3>
-            <p>Automatic timetable generation, customizable reports, and digital document creation save time and reduce administrative errors.</p>
-          </div>
-        </div>
+    <div class="grid2">
+      <div class="feature card">
+        <div class="icon">🎯</div>
+        <h3>Uganda-Centric Design</h3>
+        <p>Developed with understanding of Ugandan educational ecosystem including fee structures, document formats, and
+          administrative workflows.</p>
       </div>
+
+      <div class="feature card">
+        <div class="icon">🧩</div>
+        <h3>Comprehensive Feature Set</h3>
+        <p>Student management, teacher portals, smart scheduling, analytics & reporting, financial tracking, and
+          document generation all on one platform.</p>
+      </div>
+
+      <div class="feature card">
+        <div class="icon">📢</div>
+        <h3>Scalable Pricing</h3>
+        <p>Tiered pricing model charges per active student with decreasing costs at higher volumes, viable for small
+          primary schools to large institutions.</p>
+      </div>
+
+      <div class="feature card">
+        <div class="icon">📈</div>
+        <h3>Automation & Productivity</h3>
+        <p>Automatic timetable generation, customizable reports, and digital document creation save time and reduce
+          administrative errors.</p>
+      </div>
+    </div>
+    </div>
     </section>
 
     <!-- PROCESS -->
@@ -824,7 +469,8 @@
               <input id="location" name="location" required placeholder="District / City" />
 
               <label for="message">Message (optional)</label>
-              <textarea id="message" name="message" placeholder="Tell us what you need, timeline, or budget range."></textarea>
+              <textarea id="message" name="message"
+                placeholder="Tell us what you need, timeline, or budget range."></textarea>
 
               <div class="ctaRow" style="margin-top:12px;">
                 <button class="btn primary" type="submit">Submit Request</button>
@@ -832,7 +478,8 @@
               </div>
 
               <p class="fine" id="formStatus">
-                For Wix/Webflow, connect this form to email/Google Sheets. In this HTML version, we generate a WhatsApp message for quick sending.
+                For Wix/Webflow, connect this form to email/Google Sheets. In this HTML version, we generate a WhatsApp
+                message for quick sending.
               </p>
             </form>
           </div>
@@ -849,7 +496,8 @@
               <span class="pill">📍 <span id="agencyLocation"></span></span>
             </div>
 
-            <div class="card" style="margin-top:14px; padding:14px; background: rgba(255,255,255,.04); box-shadow:none;">
+            <div class="card"
+              style="margin-top:14px; padding:14px; background: rgba(255,255,255,.04); box-shadow:none;">
               <h3 style="margin:0 0 8px; font-size:16px;">School Dynamics (official link)</h3>
               <p class="muted" style="margin:0 0 10px;">View official resources below.</p>
               <div class="ctaRow">
@@ -901,73 +549,7 @@
     </footer>
   </main>
 
-  <script>
-    // Fill agency info in page
-    setText("agencyNameTop", AGENCY_NAME);
-    setText("agencyNameInline", AGENCY_NAME);
-    setText("agencyNameBottom", AGENCY_NAME);
-    setText("agencyNameBottom2", AGENCY_NAME);
-    setText("agencyPhone", "+" + AGENCY_PHONE_E164);
-    setText("agencyEmail", AGENCY_EMAIL);
-    setText("agencyLocation", AGENCY_LOCATION);
-    setText("year", new Date().getFullYear());
-
-    // Wire School Dynamics official link + UTM
-    setHref("sdLearn", withUtm(SCHOOL_DYNAMICS_URL, "school_dynamics_leads"));
-    setHref("sdOfficial", withUtm(SCHOOL_DYNAMICS_URL, "school_dynamics_leads"));
-
-    // Default WhatsApp message
-    const defaultMsg =
-      `Hello ${AGENCY_NAME}, I’m interested in your products/services.\n` +
-      `Product of interest: ____\nName: ____\nBusiness/School: ____\nPhone: ____\nLocation: ____\n` +
-      `Please share details and next steps.`;
-    setHref("btnWhatsApp", waLink(defaultMsg));
-
-    // Select product and jump to form
-    window.selectProduct = function(productName){
-      const sel = document.getElementById("interest");
-      if (sel){
-        // if product exists in dropdown, select it
-        const options = Array.from(sel.options);
-        const match = options.find(o => o.text === productName);
-        if (match) sel.value = productName;
-      }
-      location.hash = "#contact";
-    };
-
-    // Form: create WhatsApp message based on selected interest
-    const form = document.getElementById("leadForm");
-    const status = document.getElementById("formStatus");
-
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const interest = document.getElementById("interest").value.trim();
-      const name = document.getElementById("name").value.trim();
-      const org = document.getElementById("org").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const loc = document.getElementById("location").value.trim();
-      const msg = document.getElementById("message").value.trim();
-
-      const waMsg =
-        `Hello ${AGENCY_NAME}, I’m interested in your offer.\n\n` +
-        `Product/Service: ${interest}\n` +
-        `Name: ${name}\n` +
-        `Business/School: ${org}\n` +
-        `Phone: ${phone}\n` +
-        `Location: ${loc}\n` +
-        (msg ? `Message: ${msg}\n` : "") +
-        `\nPlease share pricing/details and next steps.`;
-
-      const link = waLink(waMsg);
-      setHref("btnWhatsApp", link);
-
-      status.textContent =
-        "Request captured. Click “Chat on WhatsApp” to send your details instantly. (In Wix/Webflow, connect the form to email or Google Sheets.)";
-
-      // Optional: auto-open WhatsApp
-      // window.open(link, "_blank", "noopener");
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
+
 </html>
