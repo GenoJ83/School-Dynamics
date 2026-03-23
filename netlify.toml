@@ -1,0 +1,15 @@
+# Netlify — School Dynamics (React app in /webapp)
+# Dashboard: https://app.netlify.com — connect this Git repo, use defaults below.
+
+[build]
+  command = "cd webapp && npm ci && npm run build"
+  publish = "webapp/dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Client-side routing (React Router): non-file URLs serve index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
